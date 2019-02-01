@@ -1,0 +1,65 @@
+#
+#	Methods
+#
+@prefix m1: <http://linked.data.gov.au/def/gnaf/code/MeshBlockMatchTypes#ParcelLevel> .
+@prefix m2: <http://linked.data.gov.au/def/gnaf/code/MeshBlockMatchTypes#GapGeocodedAddressLevel> .
+@prefix m3: <http://linked.data.gov.au/def/gnaf/code/MeshBlockMatchTypes#StreetLocalityLevelSingle> .
+@prefix m4: <http://linked.data.gov.au/def/gnaf/code/MeshBlockMatchTypes#StreetLocalityLevelMultiple> .
+@prefix m5: <http://linked.data.gov.au/def/gnaf/code/MeshBlockMatchTypes#LocalityLevelSingle> .
+
+#
+#	Data types
+#
+@prefix d: <http://www.w3.org/2001/XMLSchema#date> .
+
+#
+#   Linkset
+#
+@prefix : <http://linked.data.gov.au/linkset/eawlyn/statement/> .
+@prefix s: <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> .
+@prefix p: <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> .
+@prefix o: <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> .
+@prefix g: <http://linked.data.gov.au/dataset/gnaf/address/> .
+@prefix b: <http://linked.data.gov.au/dataset/asgs2016/meshblock> .
+@prefix m: <http://linked.data.gov.au/def/loci/hadGenerationMethod> .
+@prefix w: <http://www.opengis.net/ont/geosparql#sfWithin> .
+@prefix c: <http://purl.org/dc/terms/created> .
+
+@prefix loci: <http://linked.data.gov.au/def/loci#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+<http://linked.data.gov.au/linkset/iwdhmf> a loci:Linkset ;
+    dct:title "Addresses (Nov 2018) Mesh Block (2016) Linkset" ;
+    dct:description """This Loc-I Linkset relates the G-NAF Address individuals to ASGS Mesh Block individuals. Every relation is a geosparql:sfWithin.
+
+The Linkset triples (Address sfWithin MeshBlock) are reified so that each triple is contained within an RDF statement class instance. The triple is identified by the G-NAF MeshBlockMatch persistent identifier and the method used to generate the triple is given by the loci:hadGenerationMethod.
+
+The triples for the main data in this linkset - the Statements relating Addresses to Catchments - are valid RDF in the Turtle syntax but an unusual namespacing arrangement is used so all terms are indicated with as few letters as possible, mostly one letter then colon, e.g. s: for http://www.w3.org/1999/02/22-rdf-syntax-ns#subject, rather than the more common rdf:subject. This is simply to reduce file size."""@en ;
+    dct:publisher <http://catalogue.linked.data.gov.au/org/O-000886> ;
+    dcat:contactPoint _:edmond ;
+    dct:issued "2019-02-01"^^xsd:date ;
+    dct:modified "2019-02-01"^^xsd:date ;
+    dct:contributor <http://orcid.org/0000-0002-8742-7730> ;
+    void:objectsTarget <http://linked.data.gov.au/dataset/asgs2016> ;
+    void:subjectsTarget <http://linked.data.gov.au/dataset/gnaf> .
+
+_:edmond a vcard:Individual ;
+  rdfs:seeAlso <https://orcid.org/0000-0002-6047-9864> ;
+  vcard:fn "Edmond Chuc" ;
+  vcard:hasEmail <mailto:edmond.chuc@csiro.au> .
+
+:proc a prov:Plan ;
+    rdfs:label "Generation of Mesh Block Match linkset method." ;
+    prov:value <> ; # TODO
+    rdfs:comment "The method used to generate the G-NAF Addresses to ASGS Mesh Blocks linkset." ;
+    prov:wasAttributedTo _:edmond ;
+    prov:generatedAtTime "2019-02-01"^^xsd:date .
