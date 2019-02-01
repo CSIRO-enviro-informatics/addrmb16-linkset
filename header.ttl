@@ -59,7 +59,7 @@ _:edmond a vcard:Individual ;
 
 :proc a prov:Plan ;
     rdfs:label "Generation of Mesh Block Match linkset method." ;
-    prov:value <> ; # TODO
+    prov:value <https://raw.githubusercontent.com/CSIRO-enviro-informatics/addrmb16-linkset/master/linkset_generation_method.txt> ;
     rdfs:comment "The method used to generate the G-NAF Addresses to ASGS Mesh Blocks linkset." ;
     prov:wasAttributedTo _:edmond ;
     prov:generatedAtTime "2019-02-01"^^xsd:date .
