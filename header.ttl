@@ -43,6 +43,8 @@
 
 The Linkset triples (Address sfWithin MeshBlock) are reified so that each triple is contained within an RDF statement class instance. The triple is identified by the G-NAF MeshBlockMatch persistent identifier and the method used to generate the triple is given by the loci:hadGenerationMethod.
 
+This linkset contains 5 generation methods described by the [Mesh Block Match](http://linked.data.gov.au/def/gnaf/code/MeshBlockMatchTypes).
+
 The triples for the main data in this linkset - the Statements relating Addresses to Catchments - are valid RDF in the Turtle syntax but an unusual namespacing arrangement is used so all terms are indicated with as few letters as possible, mostly one letter then colon, e.g. s: for http://www.w3.org/1999/02/22-rdf-syntax-ns#subject, rather than the more common rdf:subject. This is simply to reduce file size."""@en ;
     dct:publisher <http://catalogue.linked.data.gov.au/org/O-000886> ;
     dcat:contactPoint _:edmond ;
