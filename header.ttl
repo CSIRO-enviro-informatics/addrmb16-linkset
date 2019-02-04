@@ -53,7 +53,7 @@ The triples for the main data in this linkset - the Statements relating Addresse
     dct:contributor <http://orcid.org/0000-0002-8742-7730> ;
     void:objectsTarget <http://linked.data.gov.au/dataset/asgs2016> ;
     void:subjectsTarget <http://linked.data.gov.au/dataset/gnaf> ;
-    m:hadGenerationMethod :proc .
+    m: :proc .
 
 _:edmond a vcard:Individual ;
   rdfs:seeAlso <https://orcid.org/0000-0002-6047-9864> ;
