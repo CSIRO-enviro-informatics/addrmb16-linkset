@@ -15,7 +15,7 @@
 #
 #   Linkset
 #
-@prefix : <http://linked.data.gov.au/linkset/iwdhmf/> .
+@prefix : <http://linked.data.gov.au/linkset/iwdhmf/statement/> .
 @prefix s: <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> .
 @prefix p: <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> .
 @prefix o: <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> .
