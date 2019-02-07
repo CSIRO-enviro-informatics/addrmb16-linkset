@@ -53,14 +53,14 @@ The triples for the main data in this linkset - the Statements relating Addresse
     dct:contributor <http://orcid.org/0000-0002-8742-7730> ;
     void:objectsTarget <http://linked.data.gov.au/dataset/asgs2016> ;
     void:subjectsTarget <http://linked.data.gov.au/dataset/gnaf> ;
-    m: :proc .
+    m: _:proc .
 
 _:edmond a vcard:Individual ;
   rdfs:seeAlso <https://orcid.org/0000-0002-6047-9864> ;
   vcard:fn "Edmond Chuc" ;
   vcard:hasEmail <mailto:edmond.chuc@csiro.au> .
 
-:proc a prov:Plan ;
+_:proc a prov:Plan ;
     rdfs:label "Generation of Mesh Block Match linkset method." ;
     prov:value <https://raw.githubusercontent.com/CSIRO-enviro-informatics/addrmb16-linkset/master/linkset_generation_method.txt> ;
     rdfs:comment "The method used to generate the G-NAF Addresses to ASGS Mesh Blocks linkset." ;
