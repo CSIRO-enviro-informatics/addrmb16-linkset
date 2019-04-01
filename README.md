@@ -1,4 +1,4 @@
-# Current Addresses to 2016 Mesh Block Linkset
+# Current Addresses to 2016 Mesh Blocks Linkset
 This code repository contains a Linkset - a specialised Dataset linking objects in two other Datasets.
 
 This Linkset contains spatial associations between [`Address`](http://linked.data.gov.au/def/gnaf#Address) class objects in the latest version of the Geocoded National Address File (GNAF Current) and [`Mesh Block`](http://linked.data.gov.au/def/asgs#MeshBlock) class objects in the 2016 version of the Australian Statistical Geography Standard (ASGS 2016).
