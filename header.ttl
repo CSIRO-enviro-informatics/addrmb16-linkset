@@ -1,5 +1,5 @@
 #
-#	Methods
+#       Methods
 #
 @prefix m1: <http://linked.data.gov.au/def/gnaf/code/MeshBlockMatchTypes#ParcelLevel> .
 @prefix m2: <http://linked.data.gov.au/def/gnaf/code/MeshBlockMatchTypes#GapGeocodedAddressLevel> .
@@ -8,7 +8,7 @@
 @prefix m5: <http://linked.data.gov.au/def/gnaf/code/MeshBlockMatchTypes#LocalityLevelSingle> .
 
 #
-#	Data types
+#       Data types
 #
 @prefix d: <http://www.w3.org/2001/XMLSchema#date> .
 
@@ -16,12 +16,14 @@
 #   Linkset
 #
 @prefix : <http://linked.data.gov.au/linkset/iwdhmf/statement/> .
+@prefix l: <http://linked.data.gov.au/linkset/iwdhmf> .
 @prefix s: <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> .
 @prefix p: <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> .
 @prefix o: <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> .
 @prefix g: <http://linked.data.gov.au/dataset/gnaf/address/> .
 @prefix b: <http://linked.data.gov.au/dataset/asgs2016/meshblock/> .
 @prefix m: <http://linked.data.gov.au/def/loci/hadGenerationMethod> .
+@prefix i: <http://purl.org/dc/terms/isPartOf> .
 @prefix w: <http://www.opengis.net/ont/geosparql#sfWithin> .
 @prefix c: <http://purl.org/dc/terms/created> .
 
@@ -37,7 +39,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 
-<http://linked.data.gov.au/linkset/iwdhmf> a loci:Linkset ;
+l: a loci:Linkset ;
     dct:title "Addresses (Nov 2018) Mesh Block (2016) Linkset" ;
     dct:description """This Loc-I Linkset relates the G-NAF Address individuals to ASGS Mesh Block individuals. Every relation is a geosparql:sfWithin.
 
@@ -53,16 +55,17 @@ The triples for the main data in this linkset - the Statements relating Addresse
     dct:contributor <http://orcid.org/0000-0002-8742-7730> ;
     void:objectsTarget <http://linked.data.gov.au/dataset/asgs2016> ;
     void:subjectsTarget <http://linked.data.gov.au/dataset/gnaf> ;
-    m: _:proc .
+    m: _:admb16_p .
 
 _:edmond a vcard:Individual ;
   rdfs:seeAlso <https://orcid.org/0000-0002-6047-9864> ;
   vcard:fn "Edmond Chuc" ;
   vcard:hasEmail <mailto:edmond.chuc@csiro.au> .
 
-_:proc a prov:Plan ;
+_:admb16_p a prov:Plan ;
     rdfs:label "Generation of Mesh Block Match linkset method." ;
     prov:value <https://raw.githubusercontent.com/CSIRO-enviro-informatics/addrmb16-linkset/master/linkset_generation_method.txt> ;
     rdfs:comment "The method used to generate the G-NAF Addresses to ASGS Mesh Blocks linkset." ;
     prov:wasAttributedTo _:edmond ;
     prov:generatedAtTime "2019-02-01"^^xsd:date .
+
